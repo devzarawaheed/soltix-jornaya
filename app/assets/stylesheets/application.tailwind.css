@@ -1,0 +1,330 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: white;
+  --secondary: #D1D5DB;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+@layer utilities {
+  input[type="text"]::-ms-clear, input[type="search"]::-ms-clear {  
+    cursor: pointer;
+  }
+  
+ input[type="text"]::-ms-reveal, input[type="search"]::-ms-reveal { 
+    cursor: pointer;
+  }
+
+  input[type="text"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-cancel-button{ 
+    cursor: pointer;
+  }
+
+  select {
+    background-image: url("arrow_down.svg");
+    background-size: 1.9em 1.9em;
+  }
+
+  select option {
+    color: #111827;
+    background-color: white;
+  }
+}
+
+@layer components {
+  .pagination {
+    @apply flex flex-wrap justify-center my-2;
+  }
+
+  .pagination a:first-child {
+    @apply border-y border-l rounded-l-lg border-gray-300 text-gray-500;
+  }
+
+  .pagination a:last-child {
+    @apply border rounded-r-lg border-gray-300 text-gray-500;
+  }
+
+  .pagination span:not(:first-child):not(:last-child) {
+    @apply border-y border-l border-gray-300 bg-white text-gray-500;
+  }
+
+  .pagination a:not(:first-child):not(:last-child):not(.current) {
+    @apply border-y border-l border-gray-300 bg-white text-gray-500;
+  }
+
+  .pagination a.current {
+    @apply text-gray-200 bg-gray-200 border-gray-300 text-gray-900;
+  }
+
+  .pagination a:hover:not(.gap) {
+    @apply text-white bg-gray-400 border-gray-400;
+  }
+
+  .pagination a:not(:first-child):not(:last-child):hover:not(.gap) {
+    @apply text-white bg-gray-400 border-gray-400;
+  }
+
+  /* styles.css */
+  .jobdescription h1,
+  .jobdescription h1 strong,
+  .jobdescription h2 {
+    @apply text-sm font-medium text-gray-400 mb-0.5;
+    /* @apply text-sm font-medium text-gray-700 mb-0.5 lowercase first-letter:capitalize; */
+  }
+
+  .jobdescription h2 strong {
+    @apply text-sm font-medium text-gray-400;
+  }
+
+  .jobdescription li h2 {
+    @apply inline text-sm font-medium leading-6 text-gray-400;
+    /* @apply inline text-sm font-medium leading-6 text-gray-700 lowercase first-letter:capitalize; */
+  }
+
+  .jobdescription h3 {
+    @apply mb-0.5 text-sm font-medium leading-6 text-gray-400;
+    /* @apply mb-0.5 text-sm font-medium leading-6 text-gray-700 lowercase first-letter:capitalize; */
+    /* @apply mb-0.5 text-sm font-medium leading-6 text-gray-700 lowercase first-letter:capitalize; */
+  }
+
+  .jobdescription h4,
+  .jobdescription h5,
+  .jobdescription h6 {
+    @apply mb-0.5 text-sm font-medium leading-6 text-gray-400;
+  }
+  .jobdescription p {
+    @apply text-sm text-gray-700 mb-6;
+  }
+
+  .jobdescription p strong,
+  .jobdescription li strong {
+    @apply text-gray-400 font-medium mb-2;
+    /* @apply text-gray-700 font-medium block lowercase first-letter:uppercase */
+  }
+
+  .jobdescription ul,
+  .jobdescription ol {
+    @apply list-disc list-inside mb-6;
+  }
+
+  .jobdescription li {
+    @apply ml-5 list-outside;
+  }
+
+  .jobdescription blockquote {
+    @apply border-l-4 border-gray-400 pl-4 italic;
+  }
+
+  .jobdescription code {
+    @apply bg-gray-100 text-sm p-1 rounded;
+  }
+
+  .jobdescription pre {
+    @apply bg-gray-200 p-4 rounded overflow-auto;
+  }
+
+  .jobdescription a {
+    @apply font-medium text-[#004EFC] hover:text-[#3374FF] hover:underline;
+  }
+
+  .jobdescription hr {
+    @apply mb-6;
+  }
+
+  .jobdescription li p strong {
+    @apply inline capitalize;
+  }
+
+  .jobdescription li p {
+    @apply inline;
+  }
+
+  /* .jobdescription p:has(> strong) {
+    @apply mb-0;
+  } */
+
+  .jobdescription p strong {
+    @apply space-y-2
+  }
+
+  .jobdescription strong br {
+    @apply mb-4 block
+  }
+
+  .jobdescription p br {
+    @apply m-4 
+  }
+
+  .h-70-percent {
+    max-height: 70vh;
+  }
+
+  .h-64-percent {
+    max-height: 64vh;
+  }
+
+  .min-h-64-percent {
+    min-height: 64vh;
+  }
+
+  .w-sport {
+    width: 94px;
+  }
+
+  .w-sport-m {
+    width: 88px;
+  }
+
+  .w-department {
+    width: 136px;
+  }
+
+  .w-department-m {
+    width: 125px;
+  }
+
+  .w-state {
+    width: 92px;
+  }
+
+  .w-state-m {
+    width: 86px;
+  }
+
+  .w-division {
+    width: 109px;
+  }
+
+  .w-division-m {
+    width: 101px;
+  }
+
+  .w-conference {
+    width: 135px;
+  }
+
+  .w-conference-m {
+    width: 123px;
+  }
+
+  .w-school {
+    width: 103px;
+  }
+
+  .w-school-m {
+    width: 95px;
+  }
+
+  .w-level {
+    width: 119px;
+  }
+
+  .w-level-m {
+    width: 110px;
+  }
+
+  .w-position {
+    width: 255px;
+  }
+
+  .w-position-m {
+    width: 227px;
+  }
+
+  .w-ftpt {
+    width: 108px;
+  }
+
+  .w-ftpt-m {
+    width: 100px;
+  }
+
+  .tooltip {
+    z-index: 99999; @apply absolute max-w-60 top-0 left-0 bg-[#374151] text-white text-[10px] font-semibold border rounded-[4px] border-[#374151] w-max px-1 py-0.5 whitespace-pre-line;    
+  }
+
+  .bg-icon-color {
+    background-color: #4d84ff;
+  }
+
+  .intercolegiate-blue {
+    color: #004EFC;
+  }
+}
+
+#resumeDropArea > .field_with_errors {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 0px;
+  top: -9px;
+  padding-left: 5px;
+  width: 0; 
+  height: 0; 
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent; 
+  border-right:20px solid #004EFC;
+}
+
+.arrow-up {
+  position: absolute;
+  right: 24px;
+  top: 30px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #004EFC;
+}
+
+.bg-custom-image {
+  background-size: cover;
+  height: 80%;
+  width: 100%;
+}
+.featured-post-title {
+  color: var(--Neutral-Grey-900, #111827);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.mark-as-feature {
+  color: var(--Brand-Intercollegiate-Blue, #004EFC);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.star-icon {
+  height: 20px;
+  width: 20px;
+}
