@@ -14,7 +14,7 @@
       <div class="flex justify-center">
           <hr class="border-orange-500 w-16 border-2">
       </div>
-      <%= form_with(model: @lead, url: home_index_path, local: true, id: 'lead_form') do |form| %>
+      <%= form_with(model: @lead, url: home_index_path, local: true) do |form| %>
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
               <div class="sm:col-span-2">
                   <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name <span class="text-orange-500">*</span></label>
@@ -35,10 +35,10 @@
           <input type="checkbox" id="leadid_tcpa_disclosure" name="lead[leadid_tcpa_disclosure]" /><label for="leadid_tcpa_disclosure" class="text-sm ml-1">By clicking "Submit", you consent for Sybrid BPO to getting marketing and promotional calls and messages. To ensure that your inquiries are handled promptly, courteously, and accurately, some of the pgone calls between you and us or any of our affiliates, agents, assigns and service providers, may be monitored or recorded by us and any of our affiliates, agents, assigns and service providers, to enhance service to you. You consent to this monitoring and recording. You agree that the Company may, from time to time, make calls and/or send text messages to you at your telephone numbers that could result in charges to you, the manner in which these calls or text messages are made to you may include, but is not limited to, the use of prerecorded/artificial voice messages and/or automatic telephone dialing system. You further agree that the Company may send emails to you at any email address you provide us or use other electronic means of communication to the extent permitted by law.</label>
         </div>
         <div class="mt-3">
-          <input type="checkbox" id="terms_and_policy" name="lead[terms_and_policy]" /><label for="terms_and_policy" class="text-sm">Yes, I agree with the privacy policy and terms and conditions.</label>
+          <input type="checkbox" id="terms_and_policy" name="lead[terms_and_policy]" /><label for="terms_and_policy" class="text-sm ml-1">Yes, I agree with the privacy policy and terms and conditions.</label>
         </div>
 
-          <input type="submit" class="button block mx-auto mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-orange-500 rounded-lg py-2.5 px-5 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-orange-600" value="Submit" onclick="handleSubmit(event)">
+          <input type="submit" class="button block mx-auto mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-orange-500 rounded-lg py-2.5 px-5 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-orange-600" value="Submit">
 
       <% end %>
                 </div>
@@ -78,35 +78,14 @@
 </div>
 
 <script id="LeadiDscript" type="text/javascript">
-  function generateLeadId() {
-    var s = document.createElement('script');
-    s.id = 'LeadiDscript_campaign';
-    s.type = 'text/javascript';
-    s.async = true;
-    s.src = '//create.lidstatic.com/campaign/3e559fe0-2462-e29a-7404-6e404ec518fb.js?snippet_version=2&f=reset';
-    var LeadiDscript = document.getElementById('LeadiDscript');
-    if (LeadiDscript) {
-      LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
-    } else {
-      console.error("Element with ID 'LeadiDscript' not found");
-    }
-  }
-
-  function handleSubmit(event) {
-    if (event) {
-      event.preventDefault();
-    }
-
-    generateLeadId();
-
-    setTimeout(function() {
-      var leadId = document.getElementById('leadid_token').value;
-      if (leadId) {
-        document.getElementById('lead_form').submit();
-      } else {
-        setTimeout(handleSubmit, 5000);
-      }
-    }, 5000);
-  }
+(function() {
+var s = document.createElement('script');
+s.id = 'LeadiDscript_campaign';
+s.type = 'text/javascript';
+s.async = true;
+s.src = '//create.lidstatic.com/campaign/3e559fe0-2462-e29a-7404-6e404ec518fb.js?snippet_version=2&f=reset';
+var LeadiDscript = document.getElementById('LeadiDscript');
+LeadiDscript.parentNode.insertBefore(s, LeadiDscript);
+})();
 </script>
 <noscript><img src='//create.leadid.com/noscript.gif?lac=AA8B6035-684F-E7BB-B65D-589BE1F246ED&lck=3e559fe0-2462-e29a-7404-6e404ec518fb&snippet_version=2' /></noscript>
