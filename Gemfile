@@ -20,6 +20,13 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'sprockets-rails'
 
+gem 'activeadmin'
+
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 
