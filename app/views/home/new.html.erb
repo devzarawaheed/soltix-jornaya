@@ -1,17 +1,74 @@
-<div>
-  <main class="text-gray-900">
-    <section class="pt-5 md:pt-5">
-        <div class="container mx-auto px-8 lg:flex justify-center">
-            <div class="text-center lg:text-left lg:w-1/2">
-                <div class="py-8 px-4 mx-auto max-w-2xl lg:py-8 border border-gray-900 rounded-lg">
-      <h2 class="mb-4 text-xl font-bold text-gray-900 justify-center text-center lg:text-center">Soltix Group</h2>
-      <div class="flex justify-center">
-          <hr class="border-gray-900 w-16 border-2">
-      </div>
+<h1 class="text-3xl font-bold mt-8 text-center">HOME SECURITY SOLUTIONS</h1>
+    <p class="text-lg text-center mb-4">Soltix is an Authorized Seller of Vivint Home Security Solutions</p>
+
+    <h2 class="text-2xl font-bold mt-8 mb-4 text-center">Contact Us: (Inbound dialler number)</h2>
+
+    <div class="container mx-auto grid grid-cols-2 gap-8">
+        <div class="box border-2 border-green-500 rounded-lg bg-white p-8">
+            <h3 class="bg-green-500 text-white px-4 py-2 rounded-t-lg">Doorbell Camera Pro Features:</h3>
+            <ul class="mt-4">
+                <li>Louder & Clearer Speaker - The two-way talk feature, chimes, and Holiday Chimes are enhanced for clarity
+                    and volume for users of the new Doorbell Camera Pro.</li>
+                <li>Bigger Brighter LED Ring - You'll receive notifications when a package is taken from your doorstep, an
+                    updated feature of the Doorbell Camera Pro. Available after launch.</li>
+                <li>Upgraded Intelligence - Enhanced intelligent detection and advanced Smart Deter capabilities.</li>
+                <li>Round-Trip Package Detection - Receive notifications when a package is taken from your doorstep.</li>
+                <li>Improved Image Quality - Enhanced video performance in low-light conditions, offering more detailed
+                    shadows and improved color accuracy, especially at night.</li>
+                <li>Faster, Smoother Video Playback - A new built-in SD card enhances performance, enabling continuous 24/7
+                    monitoring and recording. Additional charges may apply.</li>
+            </ul>
+        </div>
+        <div class="box border-2 border-green-500 rounded-lg bg-white p-8">
+            <h3 class="bg-green-500 text-white px-4 py-2 rounded-t-lg">Spotlight Camera Features:</h3>
+            <ul class="mt-4">
+                <li>See Your Path In The Dark - In situations where Deter Mode is not activated, Spotlight Pro can
+                    gracefully illuminate pathways, aiding individuals as they navigate around the driveway in darkness,
+                    ensuring visibility and safety.</li>
+                <li>Detect & Illuminate Visitors- Employing computer vision technology, when Deter Mode is engaged,
+                    Spotlight Pro can identify individuals on your property, track their movements, and illuminate them
+                    with a spotlight, effectively alerting them to their visibility as they are detected by your home
+                    security system.</li>
+                <li>Enhanced Smart Deter - If a person lingers too long, along with the standard deter features of Outdoor
+                    Camera Pro, Spotlight Pro will begin Spotlight mode to deter any potential thief.</li>
+            </ul>
+        </div>
+        <div class="box border-2 border-green-500 rounded-lg bg-white p-8">
+            <h3 class="bg-green-500 text-white px-4 py-2 rounded-t-lg">Outdoor Camera Pro Features:</h3>
+            <ul class="mt-4">
+                <li>Faster, Smoother Video Playback - Enhanced with a newly integrated SD card, ensuring upgraded
+                    performance and uninterrupted 24/7 monitoring and recording. Plus, enjoy improved image quality.</li>
+                <li>Improved Image Quality - Fantastic image color and detail, the new Outdoor Camera Pro boasts enhanced
+                    detection capabilities thanks to its upgraded features.</li>
+                <li>Spotlight Pro Enabled - The latest Outdoor Camera Pro (Gen 2) introduces an exciting addition to our
+                    product lineup, showcasing enhanced capabilities.</li>
+            </ul>
+        </div>
+        <div class="box border-2 border-green-500 rounded-lg bg-white p-8">
+            <h3 class="bg-green-500 text-white px-4 py-2 rounded-t-lg">Indoor Camera Features:</h3>
+            <ul class="mt-4">
+                <li>Improved Image Quality & Intelligence - Experience next-generation image quality, complemented by
+                    advanced intelligence feature that detects people within the home and monitors specific detection
+                    zones.</li>
+                <li>Extra In Home Protection - Introducing a new audio analytics feature designed to detect glass breaks
+                    or signals from existing smoke and CO2 detectors. Upon detection, it alerts both the smart home panel
+                    and the user, enhancing home protection.</li>
+                <li>Faster, Smoother Video Playback - Benefit from faster and smoother video playback with the addition
+                    of a new built-in SD card, ensuring improved performance and continuous 24/7 monitoring and recording.
+                    Additional fee required.</li>
+                <li>New Design - Discover a sleeker and modernized form factor featuring a fully articulating hinge
+                    system, offering convenient mounting and placement options for seamless integration.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="container mx-auto mt-8 mb-16">
+        <h2 class="text-2xl font-bold mb-4">Contact Us:</h2>
       <%= form_with(model: @lead, url: home_index_path, local: true) do |form| %>
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
               <div class="sm:col-span-2">
-                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name <span class="text-orange-500">*</span></label>
+                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name <span class="text-orange-500">*</span></label>
                   <input type="text" name="lead[name]" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="">
               </div>
               <div class="sm:col-span-2">
@@ -26,49 +83,21 @@
 
           </div>
           <div class="mt-3">
-          <input type="checkbox" id="leadid_tcpa_disclosure" name="lead[leadid_tcpa_disclosure]" /><label for="leadid_tcpa_disclosure" class="text-sm ml-1">By clicking "Submit", you consent to getting marketing and promotional calls and messages.</label>
+          <p>Soltix Group are an Authorized Seller of Vivint Home Security Systems. By clicking "submit," you're giving us permission to reach out to you for marketing purposes. We promise to contact you with care, through thoughtful calls, texts, and emails, occasionally. Please note, your communications may be monitored and recorded for Quality Assurance, and to ensure we provide you with the best service possible.</p>
         </div>
         <div class="mt-3">
-          <input type="checkbox" id="terms_and_policy" name="lead[terms_and_policy]" /><label for="terms_and_policy" class="text-sm ml-1">Yes, I agree with the privacy policy and terms and conditions.</label>
+          <input type="checkbox" id="leadid_tcpa_disclosure" name="lead[leadid_tcpa_disclosure]" /><label for="leadid_tcpa_disclosure" class="text-sm ml-1"><label for="leadid_tcpa_disclosure" class="text-sm ml-1">Yes, I agree with the privacy policy and terms and conditions.</label>
         </div>
 
           <input id="submitBtn" type="submit" class="button block mx-auto mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-gray-900 rounded-lg py-2.5 px-5 focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-orange-600 disabled:opacity-50 disabled:cursor-not-allowed" value="Submit" disabled>
 
 
       <% end %>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    </main>
-
-
-    <footer class="container mx-auto py-16 px-3 mt-48 mb-8 text-gray-800">
-        <div class="flex -mx-3">
-            <div class="flex-1 px-3">
-                <h2 class="text-lg font-semibold">About Us</h2>
-                <p class="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.
-                </p>
-            </div>
-            <div class="flex-1 px-3">
-                <h2 class="text-lg font-semibold">Important Links</h2>
-                <ul class="mt-4 leading-loose">
-                    <li><a href="https://codebushi.com">Terms &amp; Conditions</a></li>
-                    <li><a href="https://codebushi.com">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="flex-1 px-3">
-                <h2 class="text-lg font-semibold">Social Media</h2>
-                <ul class="mt-4 leading-loose">
-                    <li><a href="https://dev.to/changoman">Dev.to</a></li>
-                    <li><a href="https://twitter.com/HuntaroSan">Twitter</a></li>
-                    <li><a href="https://github.com/codebushi/gatsby-starter-lander">GitHub</a></li>
-                </ul>
-            </div>
-        </div>
+    <footer class="text-center">
+        <p class="mt-8 mb-4 text-sm text-gray-600">Copyright 2024. All rights reserved.</p>
     </footer>
-</div>
 
 <script id="LeadiDscript" type="text/javascript">
     (function() {
@@ -86,10 +115,9 @@
         var email = document.getElementById("email").value;
         var phone = document.getElementById("phone_no").value;
         var tcpaDisclosure = document.getElementById("leadid_tcpa_disclosure").checked;
-        var termsPolicy = document.getElementById("terms_and_policy").checked;
         var submitBtn = document.getElementById("submitBtn");
 
-        if (name !== "" && email !== "" && phone !== "" && tcpaDisclosure && termsPolicy) {
+        if (name !== "" && email !== "" && phone !== "" && tcpaDisclosure) {
             submitBtn.disabled = false;
         } else {
             submitBtn.disabled = true;
@@ -100,7 +128,6 @@
     document.getElementById("email").addEventListener("change", validateForm);
     document.getElementById("phone_no").addEventListener("change", validateForm);
     document.getElementById("leadid_tcpa_disclosure").addEventListener("change", validateForm);
-    document.getElementById("terms_and_policy").addEventListener("change", validateForm);
 </script>
 
 <noscript><img src='//create.leadid.com/noscript.gif?lac=AA8B6035-684F-E7BB-B65D-589BE1F246ED&lck=3e559fe0-2462-e29a-7404-6e404ec518fb&snippet_version=2' /></noscript>
