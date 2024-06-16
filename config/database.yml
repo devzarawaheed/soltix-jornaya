@@ -81,11 +81,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  host: soltix_jornaya-pg-postgresql
-  database: soltix_jornaya_production
-  username: soltix_jornaya_production
-  password: <%= ENV["SOLTIX_JORNAYA_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 demo:
   <<: *default
